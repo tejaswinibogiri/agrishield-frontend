@@ -18,6 +18,9 @@ import Marketplace from "./pages/Marketplace";
 import LearningHub from "./pages/LearningHub";
 import AIAssistant from "./pages/AIAssistant";
 import AdminPanel from "./pages/AdminPanel";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import NotFound from "./pages/NotFound";
 
 function Placeholder({ title }) {
   return (
@@ -111,6 +114,9 @@ function App() {
 
           <Routes>
 
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+
             {/* Dashboard */}
             <Route
               path="/"
@@ -153,6 +159,10 @@ function App() {
               path="/admin-panel"
               element={<AdminPanel />}
             />
+
+            <Route path="/admin-panel" element={<AdminPanel />} />
+
+            <Route path="*" element={<NotFound />} />
 
           </Routes>
 
